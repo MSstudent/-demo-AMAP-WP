@@ -19,7 +19,7 @@
     
 4.相关链接：
 
-  > 使用指南 <http://api.amap.com/WP/guide>
-  > 说明手册 <http://api.amap.com/Public/Uploads/Changelog/AMap_WP_Api_Doc.zip>
+  > 使用指南 <http://api.amap.com/WP/guide>    
+  > 说明手册 <http://api.amap.com/Public/Uploads/Changelog/AMap_WP_Api_Doc.zip>   
 
 
