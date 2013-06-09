@@ -20,7 +20,7 @@
     
 4.相关链接：
 
-  > 请在主页注册高德用户并申请key <http://api.amap.com>
+  > 请在主页注册高德用户并申请key <http://api.amap.com>     
   > 使用指南 <http://api.amap.com/WP/guide>    
   > 说明手册 <http://api.amap.com/Public/Uploads/Changelog/AMap_WP_Api_Doc.zip>   
 
