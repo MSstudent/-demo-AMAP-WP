@@ -1,0 +1,35 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="WindowsPhone7App.SearchSamples.ReGeoCode"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+     xmlns:AMap="clr-namespace:Com.AMap.Maps.Api;assembly=AMap.WP7.Map.API"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="反向地理编码" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,-10,12,0">
+            <AMap:MMap x:Name="map" Zoom="13" ToolBar="Visible"  MapLoaded="map_MapLoaded"/>
+            <TextBlock  x:Name="startText" Text="点击地图来确定匹配位置"  VerticalAlignment="Top" FontSize="30" Foreground="{StaticResource PhoneAccentBrush}"/>
+
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>

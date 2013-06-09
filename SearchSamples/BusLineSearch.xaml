@@ -1,0 +1,59 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="WindowsPhone7App.SearchSamples.BusLineSearch"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+     xmlns:AMap="clr-namespace:Com.AMap.Maps.Api;assembly=AMap.WP7.Map.API"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+ 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,-10,12,0">
+            <AMap:MMap x:Name="map" Zoom="13" ToolBar="Visible"  MapLoaded="map_MapLoaded"/>
+
+
+            <Border x:Name="showMapBorder" BorderThickness="5" CornerRadius="5" Width="Auto" Height="Auto" BorderBrush="#16589a" Opacity="0.9" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,0">
+                <StackPanel>
+                    <!--Orientation="Horizontal-->
+                    <Border Background="#16589a" Height="40">
+                        <TextBlock Text="公交线路查询" TextAlignment="Left" Foreground="#ffffff" Margin="10,3,0,0" FontWeight="Bold" FontSize="22"/>
+                    </Border>
+                    <Grid  Grid.Column="0"  Background="White">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="160" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="区号：" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Foreground="{StaticResource PhoneAccentBrush}"/>
+                        <toolkit:PhoneTextBox Style="{StaticResource PhoneTextBoxStyle}" x:Name="cityCode"  Grid.Column="1" Text="010" 
+                                      />
+                        <toolkit:PhoneTextBox Text="中关村"  Style="{StaticResource PhoneTextBoxStyle}" Grid.Column="2" x:Name="station" Hint="途径的站点名称"  
+                                      />
+                        <Button Content="查询" x:Name="Rbut"  Grid.Column="3"  Background="{StaticResource PhoneAccentBrush}" Click="Rbut_Click"  />
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+
+
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>
