@@ -7,7 +7,7 @@
     高德地图API 是一套应用程序接口。通过API，您可以轻松地在自己的应用中定制强大、快速、轻便的地图功能。
     高德地图API 是免费开放的。
     用户在调用高德地图API 必须加上Key。
-    请在主页注册高德用户并申请key    <http://api.amap.com>
+  
       
 3.本sample可提供功能：
 
@@ -20,6 +20,7 @@
     
 4.相关链接：
 
+  > 请在主页注册高德用户并申请key <http://api.amap.com>
   > 使用指南 <http://api.amap.com/WP/guide>    
   > 说明手册 <http://api.amap.com/Public/Uploads/Changelog/AMap_WP_Api_Doc.zip>   
 
